@@ -34,7 +34,7 @@ int main() {
 
     int n = 9;
    
-    vector<vector<int>> matriz(n, vector<int>(n, 0));
+    vector<vector<int>> matrix(n, vector<int>(n, 0));
 
     int tag_size = sqrt(n);
 
@@ -43,17 +43,17 @@ int main() {
 
    for (int i = start_row; i < start_row + tag_size; ++i) {
         for (int j = start_col; j < start_col + tag_size; ++j) {
-            matriz[i][j] = 1;
+            matrix[i][j] = 1;
         }
     }
 
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            cout << matriz[i][j] << " ";
+            cout << matrix[i][j] << " ";
         }
         cout << endl;
     }
-    searching_tags(matriz, tag_size);
+    searching_tags(matrix, tag_size);
 
     return 0;
 }
